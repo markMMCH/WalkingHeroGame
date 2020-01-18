@@ -1,13 +1,12 @@
  
 
 import SpriteKit
-import GameKit
 import SCLAlertView
  
 class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     struct GAP {
-        static let XGAP:CGFloat = 20
-        static let YGAP:CGFloat = 4
+        static let XGAP: CGFloat = 20
+        static let YGAP: CGFloat = 4
     }
 
     var gameOver = false {
@@ -15,7 +14,7 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
             if (newValue) {
                 checkHighScoreAndStore()
                 let gameOverLayer = childNode(withName: StickHeroGameSceneChildName.GameOverLayerName.rawValue) as SKNode?
-                gameOverLayer?.run(SKAction.moveDistance(CGVector(dx: 0, dy: 100), fadeInWithDuration: 0.2))
+                gameOverLayer?.run(.moveDistance(CGVector(dx: 0, dy: 100), fadeInWithDuration: 0.2))
             }
             
         }
@@ -23,13 +22,13 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     
     
     var viewController: GameViewController!
-    let StackHeight:CGFloat = 400.0
-    let StackMaxWidth:CGFloat = 300.0
-    let StackMinWidth:CGFloat = 100.0
-    let gravity:CGFloat = -100.0
-    let StackGapMinWidth:Int = 80
-    let HeroSpeed:CGFloat = 760
-    var losses:Int = 0
+    let StackHeight: CGFloat = 400.0
+    let StackMaxWidth: CGFloat = 300.0
+    let StackMinWidth: CGFloat = 100.0
+    let gravity: CGFloat = -100.0
+    let StackGapMinWidth: Int = 80
+    let HeroSpeed: CGFloat = 760
+    var losses: Int = 0
     
     let StoreScoreName = "com.stickHero.score"
  
@@ -41,7 +40,7 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     var nextLeftStartX:CGFloat = 0
     var stickHeight:CGFloat = 0
     
-    var score:Int = 0 {
+    var score: Int = 0 {
         willSet {
             let scoreBand = childNode(withName: StickHeroGameSceneChildName.ScoreName.rawValue) as? SKLabelNode
             scoreBand?.text = "\(newValue)"
@@ -54,15 +53,15 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    lazy var playAbleRect:CGRect = {
-        let maxAspectRatio:CGFloat = 16.0/9.0 // iPhone 5"
+    lazy var playAbleRect: CGRect = {
+        let maxAspectRatio: CGFloat = 16.0 / 9.0
         let maxAspectRatioWidth = self.size.height / maxAspectRatio
         let playableMargin = (self.size.width - maxAspectRatioWidth) / 2.0
         return CGRect(x: playableMargin, y: 0, width: maxAspectRatioWidth, height: self.size.height)
         }()
     
-    lazy var walkAction:SKAction = {
-        var textures:[SKTexture] = []
+    lazy var walkAction: SKAction = {
+        var textures: [SKTexture] = []
         for i in 0...3 {
             let texture = SKTexture(imageNamed: "person.png")
             textures.append(texture)
@@ -73,7 +72,7 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         return SKAction.repeatForever(action)
         }()
     
-    //MARK: - override
+
     override init(size: CGSize) {
         super.init(size: size)
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -259,7 +258,7 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         hero.run(walkAction, withKey: StickHeroGameSceneActionKey.WalkAction.rawValue)
         hero.run(move, completion: { [unowned self]() -> Void in
             self.score += 1
-            //print(self.score)
+    
             hero.run(SKAction.playSoundFileNamed(StickHeroGameSceneEffectAudioName.VictoryAudioName.rawValue, waitForCompletion: false))
             hero.removeAction(forKey: StickHeroGameSceneActionKey.WalkAction.rawValue)
             self.moveStackAndCreateNew()
@@ -354,7 +353,7 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     }
 }
 
-//MARK: - load node
+
 private extension StickHeroGameScene {
     func loadBackground() {
         guard let _ = childNode(withName: "background") as! SKSpriteNode? else {
@@ -498,16 +497,16 @@ private extension StickHeroGameScene {
     }
     
     func loadStacks(_ animate: Bool, startLeftPoint: CGFloat) -> SKShapeNode {
-        let max:Int = Int(StackMaxWidth / 10)
-        let min:Int = Int(StackMinWidth / 10)
-        let width:CGFloat = CGFloat(randomInRange(min...max) * 10)
-        let height:CGFloat = StackHeight
+        let max: Int = Int(StackMaxWidth / 10)
+        let min: Int = Int(StackMinWidth / 10)
+        let width: CGFloat = CGFloat(randomInRange(min...max) * 10)
+        let height: CGFloat = StackHeight
         let stack = SKShapeNode(rectOf: CGSize(width: width, height: height))
         stack.fillColor = SKColor.init(displayP3Red: 0.004, green: 0.8, blue: 0.3, alpha: 0.3)
         stack.strokeColor = SKColor.black
         stack.zPosition = StickHeroGameSceneZposition.stackZposition.rawValue
         stack.name = StickHeroGameSceneChildName.StackName.rawValue
- 
+        
         if (animate) {
             stack.position = CGPoint(x: DefinedScreenWidth / 2, y: -DefinedScreenHeight / 2 + height / 2)
             

@@ -25,8 +25,6 @@
 		73B7AD661B33BEC400115CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B7AD651B33BEC400115CAD /* Assets.xcassets */; };
 		73B7AD691B33BEC400115CAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B7AD671B33BEC400115CAD /* LaunchScreen.storyboard */; };
 		73DBBA9E1B39377D0050C4EF /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DBBA9D1B39377D0050C4EF /* Tools.swift */; };
-		7727ED471F3D100000F312B3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7727ED461F3D100000F312B3 /* StoreKit.framework */; };
-		77B0D3F21F2B202F001DA50B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0D3F11F2B202F001DA50B /* GameKit.framework */; };
 		A53455F723A0E34C00AAA631 /* loading_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A53455F623A0E34C00AAA631 /* loading_back.jpg */; };
 		A53455F923A0E48800AAA631 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A53455F823A0E48700AAA631 /* back.jpg */; };
 		A534560C23A0EE1A00AAA631 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = A534560B23A0EE1A00AAA631 /* person.png */; };
@@ -36,11 +34,9 @@
 		A534561B23A10DC800AAA631 /* WalkingHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A534561923A10DC800AAA631 /* WalkingHero.xcdatamodeld */; };
 		A534561D23A10ED400AAA631 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534561C23A10ED400AAA631 /* ScoresViewController.swift */; };
 		A534561F23A111A400AAA631 /* ScoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534561E23A111A400AAA631 /* ScoreCollectionViewCell.swift */; };
-		D2F89FA69AC4A7C46BDA65D4 /* Pods_WalkingHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3D2E19E3A486B6D7F496FE /* Pods_WalkingHero.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6C3D2E19E3A486B6D7F496FE /* Pods_WalkingHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkingHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730ED6DD1B3BA3DA0041F888 /* touch_mid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = touch_mid.wav; sourceTree = "<group>"; };
 		730ED6DF1B3BA6FD0041F888 /* Defined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defined.swift; sourceTree = "<group>"; };
 		731F6F4F1B3D095000B8D89A /* starParticle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starParticle.png; sourceTree = "<group>"; };
@@ -61,8 +57,6 @@
 		73B7AD681B33BEC400115CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73B7AD6A1B33BEC400115CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73DBBA9D1B39377D0050C4EF /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
-		7727ED461F3D100000F312B3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		77B0D3F11F2B202F001DA50B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		90A904B3296AD7614581FC4A /* Pods-WalkingHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkingHero.debug.xcconfig"; path = "Target Support Files/Pods-WalkingHero/Pods-WalkingHero.debug.xcconfig"; sourceTree = "<group>"; };
 		A53455F623A0E34C00AAA631 /* loading_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading_back.jpg; sourceTree = "<group>"; };
 		A53455F823A0E48700AAA631 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
@@ -81,25 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7727ED471F3D100000F312B3 /* StoreKit.framework in Frameworks */,
-				77B0D3F21F2B202F001DA50B /* GameKit.framework in Frameworks */,
-				D2F89FA69AC4A7C46BDA65D4 /* Pods_WalkingHero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0329CC68BFAE1F2E60A40F7E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7727ED461F3D100000F312B3 /* StoreKit.framework */,
-				77B0D3F11F2B202F001DA50B /* GameKit.framework */,
-				6C3D2E19E3A486B6D7F496FE /* Pods_WalkingHero.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6085462231A70805312FDFA5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +145,6 @@
 				A534561923A10DC800AAA631 /* WalkingHero.xcdatamodeld */,
 				73B7AD591B33BEC400115CAD /* Walking Hero */,
 				73B7AD581B33BEC400115CAD /* Products */,
-				0329CC68BFAE1F2E60A40F7E /* Frameworks */,
 				6085462231A70805312FDFA5 /* Pods */,
 			);
 			sourceTree = "<group>";

@@ -4,7 +4,6 @@ import UIKit
 import SpriteKit
 import AVFoundation
 import SCLAlertView
-import GameKit
 import CoreData
  
 let appDelegate = UIApplication.shared.delegate as? AppDelegate
