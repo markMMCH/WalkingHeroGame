@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KIs-bB-q8O">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="6eo-z4-3dM">
+            <objects>
+                <viewController id="gqx-pQ-PZ8" customClass="MainViewController" customModule="Stick_Hero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nu2-lj-xmA"/>
+                        <viewControllerLayoutGuide type="bottom" id="YPk-uG-PRS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0rL-ee-6Rh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="poG-8O-5M4">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walking Hero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-Cj-WMD">
+                                <rect key="frame" x="37.5" y="104" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="HZn-VB-4s1"/>
+                                    <constraint firstAttribute="height" constant="50" id="niJ-9K-xBm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hdi-7W-mOx">
+                                <rect key="frame" x="107.5" y="279.5" width="160" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxD-cW-Y6d">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Cod-EO-eg8"/>
+                                            <constraint firstAttribute="width" constant="160" id="a6D-Au-14r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="gqx-pQ-PZ8" eventType="touchUpInside" id="e77-vS-35w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e9-tL-JXv">
+                                        <rect key="frame" x="0.0" y="58" width="160" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="1lk-A2-Xbg"/>
+                                            <constraint firstAttribute="height" constant="50" id="adG-Pj-hN2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                        <state key="normal" title="Scores">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="scoresButtonTapped:" destination="gqx-pQ-PZ8" eventType="touchUpInside" id="i2b-hy-BKL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YPk-uG-PRS" firstAttribute="top" secondItem="poG-8O-5M4" secondAttribute="bottom" id="aao-VX-neq"/>
+                            <constraint firstAttribute="trailing" secondItem="poG-8O-5M4" secondAttribute="trailing" id="ctY-S5-Irz"/>
+                            <constraint firstItem="poG-8O-5M4" firstAttribute="top" secondItem="Nu2-lj-xmA" secondAttribute="bottom" id="dbf-0W-G0b"/>
+                            <constraint firstItem="Hdi-7W-mOx" firstAttribute="centerY" secondItem="0rL-ee-6Rh" secondAttribute="centerY" id="gLq-lV-R7C"/>
+                            <constraint firstItem="Hdi-7W-mOx" firstAttribute="centerX" secondItem="0rL-ee-6Rh" secondAttribute="centerX" id="uBE-kW-Q8m"/>
+                            <constraint firstItem="poG-8O-5M4" firstAttribute="leading" secondItem="0rL-ee-6Rh" secondAttribute="leading" id="vsL-tZ-NSj"/>
+                            <constraint firstItem="HDh-Cj-WMD" firstAttribute="centerX" secondItem="0rL-ee-6Rh" secondAttribute="centerX" id="zVh-w0-puK"/>
+                            <constraint firstItem="HDh-Cj-WMD" firstAttribute="top" secondItem="Nu2-lj-xmA" secondAttribute="bottom" constant="60" id="zal-ze-Rym"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oON-r7-Geh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfX-La-bpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="Stick_Hero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="akT-Kn-RcM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KIs-bB-q8O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ucA-hX-JAv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gqx-pQ-PZ8" kind="relationship" relationship="rootViewController" id="cGF-ni-0gY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VSA-lk-Q0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674.39999999999998" y="117.39130434782609"/>
+        </scene>
+        <!--Scores View Controller-->
+        <scene sceneID="tMe-AL-QHI">
+            <objects>
+                <collectionViewController storyboardIdentifier="ScoresViewController" id="jCa-Dx-Wt2" customClass="ScoresViewController" customModule="Stick_Hero" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="079-ko-HUq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jyg-8Q-bJg">
+                            <size key="itemSize" width="152" height="153"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="V22-Gd-GzC" customClass="ScoreCollectionViewCell" customModule="Stick_Hero" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="152" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="52i-iL-6El">
+                                    <rect key="frame" x="0.0" y="0.0" width="152" height="153"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VI-GG-bFJ">
+                                            <rect key="frame" x="10" y="10" width="132" height="133"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="2VI-GG-bFJ" secondAttribute="bottom" constant="10" id="Omt-Z0-Rs0"/>
+                                        <constraint firstItem="2VI-GG-bFJ" firstAttribute="top" secondItem="52i-iL-6El" secondAttribute="top" constant="10" id="QWn-KW-rM5"/>
+                                        <constraint firstAttribute="trailing" secondItem="2VI-GG-bFJ" secondAttribute="trailing" constant="10" id="UAu-vt-L10"/>
+                                        <constraint firstItem="2VI-GG-bFJ" firstAttribute="leading" secondItem="52i-iL-6El" secondAttribute="leading" constant="10" id="VUj-k7-1yJ"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" red="0.67165178059999997" green="0.69713193179999999" blue="0.73726254700000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="customSize" width="152" height="153"/>
+                                <connections>
+                                    <outlet property="scoreLabel" destination="2VI-GG-bFJ" id="bpj-HK-cNl"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="jCa-Dx-Wt2" id="q7g-xm-moe"/>
+                            <outlet property="delegate" destination="jCa-Dx-Wt2" id="rdU-rL-Jdg"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISQ-Rz-JTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264.80000000000001" y="884.70764617691157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back.jpg" width="1152" height="1536"/>
+    </resources>
+</document>
